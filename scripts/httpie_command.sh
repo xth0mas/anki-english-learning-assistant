@@ -1,0 +1,1 @@
+http PUT http://127.0.0.1:8000/api/word/360/ words:=@sample_data.json

@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "remove_dirs",
+            "command": "sh",
+            "args": [
+                "${workspaceFolder}/scripts/remove_dirs.sh"
+            ],
+            "type": "shell"
+        }
+    ]
+}

@@ -9,5 +9,8 @@ class WordView(APIView):
     def get(self, request, identifier):
         dict = Dictionary(settings.INPUT_FILEPATH)
         word = dict.search_word(identifier)
-        # TODO: add 'mode' query param
+
+        mode = request.query_params.get('mode')
+        if mode == 'annotated':
+            return Response(word.as_annotated_json())
         return Response(word.as_json())
